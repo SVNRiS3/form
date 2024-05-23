@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form novalidate>
+      <p>
+        <label for="email">e-mail:</label>
+        <input type="email" name="email" id="email" />
+      </p>
+      <p>
+        <label for="country">country:</label>
+        <select name="country" id="country">
+          <option value="poland">Poland</option>
+          <option value="poland">Poland</option>
+          <option value="usa">USA</option>
+          <option value="france">France</option>
+        </select>
+      </p>
+      <p>
+        <label for="zip">zip-code:</label>
+        <input type="text" name="zip" id="zip" />
+      </p>
+      <p>
+        <label for="password">password:</label
+        ><input type="password" name="password" id="password" />
+      </p>
+      <p>
+        <label for="password-confirmation">confirm password:</label
+        ><input
+          type="password"
+          name="password-confirmation"
+          id="password-confirmation"
+        />
+      </p>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>
