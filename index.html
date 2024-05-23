@@ -12,14 +12,14 @@
   </head>
   <body>
     <form novalidate>
+      <h1>Subscription form</h1>
       <p>
         <label for="email">e-mail:</label>
-        <input type="email" name="email" id="email" />
+        <input required type="email" name="email" id="email" />
       </p>
       <p>
         <label for="country">country:</label>
         <select name="country" id="country">
-          <option value="poland">Poland</option>
           <option value="poland">Poland</option>
           <option value="usa">USA</option>
           <option value="france">France</option>
@@ -27,15 +27,21 @@
       </p>
       <p>
         <label for="zip">zip-code:</label>
-        <input type="text" name="zip" id="zip" />
+        <input required type="text" name="zip" id="zip" />
       </p>
       <p>
         <label for="password">password:</label
-        ><input type="password" name="password" id="password" />
+        ><input
+          required
+          type="password"
+          name="password"
+          id="password"
+        />
       </p>
       <p>
         <label for="password-confirmation">confirm password:</label
         ><input
+          required
           type="password"
           name="password-confirmation"
           id="password-confirmation"
