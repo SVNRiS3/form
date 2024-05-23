@@ -17,3 +17,17 @@ form > p {
 form > button {
   width: 100%;
 }
+
+input:valid {
+  border: 3px solid green;
+}
+
+input:invalid {
+  border: 3px solid red;
+  background-color: #ff000021;
+}
+
+input:focus {
+  outline: none;
+  background-color: #ffffff;
+}
