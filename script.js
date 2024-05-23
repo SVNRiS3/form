@@ -12,5 +12,23 @@ class Validator {
     this.submitButton = form.querySelector('button');
   }
 
-  validate() {}
+  validate(input) {
+    const errorElement = input.nextElementSibling;
+    if (input.validity.valid) {
+      errorElement.textContent = '';
+      errorElement.className = 'error';
+      return true;
+    }
+    if (input.validity.patternMismatch) {
+      // error
+    }
+    errorElement.className = 'error active';
+    return false;
+  }
+
+  addValidation() {
+    Object.keys(this.inputs).forEach((input) => {
+      input.addEventListener('input', validate(input));
+    });
+  }
 }
