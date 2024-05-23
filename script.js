@@ -9,7 +9,6 @@ class Validator {
         'input[name="password-confirmation"]'
       ),
     };
-    this.submitButton = this.form.querySelector('button');
   }
 
   checkPasswordMatching() {
@@ -46,7 +45,16 @@ class Validator {
     return false;
   }
 
+  addFormValidation() {
+    this.form.addEventListener('submit', (event) => {
+      Object.values(this.inputs).forEach((input) => {
+        if (!this.validate(input)) event.preventDefault();
+      });
+    });
+  }
+
   addValidation() {
+    this.addFormValidation();
     Object.values(this.inputs).forEach((input) => {
       input.addEventListener('input', () => this.validate(input));
     });
