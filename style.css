@@ -18,6 +18,10 @@ form > button {
   width: 100%;
 }
 
+form label {
+  margin-bottom: 0.2em;
+}
+
 input:valid {
   border: 3px solid green;
 }
@@ -30,4 +34,14 @@ input:invalid {
 input:focus {
   outline: none;
   background-color: #ffffff;
+}
+
+span.error {
+  color: red;
+  font-size: 0.8em;
+  padding: 0;
+}
+
+span.error.active {
+  padding: 0.3em;
 }
