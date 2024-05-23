@@ -13,8 +13,8 @@ class Validator {
 
   checkPasswordMatching() {
     return (
-      this.inputs.pwdInput.textContent ===
-      this.inputs.pwdConfirmationInput.textContent
+      this.inputs.pwdInput.value ===
+      this.inputs.pwdConfirmationInput.value
     );
   }
 
@@ -31,9 +31,11 @@ class Validator {
       errorElement.textContent = 'e-mail address invalid';
     } else if (input.validity.valueMissing) {
       errorElement.textContent = "field can't be empty";
-    } else if (!checkPasswordMatching()) {
-      errorElement.textContent =
-        'maximum password length of 32 symbols exceeded';
+    } else if (
+      !this.checkPasswordMatching() &&
+      input === this.inputs.pwdConfirmationInput
+    ) {
+      errorElement.textContent = 'passwords do not match';
     } else if (input.validity.tooLong) {
       errorElement.textContent =
         'maximum password length of 32 symbols exceeded';
